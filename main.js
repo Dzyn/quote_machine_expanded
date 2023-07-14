@@ -44,7 +44,16 @@ function getQuote() {
 function newQuote() {
     // calls getQuote and changes display to show it
 
+    console.log('you clicked the button!');
 
+    // grab index.html elements and assign to variable
+    const quoteText = document.getElementById("quote-text");
+    const quoteAuthor = document.getElementById("quote-author");
+
+    const poc = getQuote();
+
+    quoteText.innerText = poc.text;
+    quoteAuthor.innerText = poc.author;
 
 }
 
