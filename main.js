@@ -50,10 +50,10 @@ function newQuote() {
     const quoteText = document.getElementById("quote-text");
     const quoteAuthor = document.getElementById("quote-author");
 
-    const poc = getQuote();
+    const quote = getQuote();
 
-    quoteText.innerText = poc.text;
-    quoteAuthor.innerText = poc.author;
+    quoteText.innerText = quote.text;
+    quoteAuthor.innerText = quote.author;
 
 }
 
