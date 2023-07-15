@@ -1,4 +1,4 @@
-const quoteArray = [
+let quoteArray = [
     {
         text: "First solve the problem, then write the code",
         author: "John Johnson"
@@ -27,10 +27,28 @@ const quoteArray = [
 
 let lastQuote = null;
 
+// create new quote to add to quoteArray
+let newlyAddedQuote =
+{
+    text: "Tenacity is TALENT.",
+    author: "Matt West"
+};
+
+// add new quote to add to quoteArray
+quoteArray.push(newlyAddedQuote);
+
+// log the quoteArray to see if new quote got added
+console.log(quoteArray);
+
 
 function getQuote() {
     // get a random quote from the quote array
     let newQuote = Math.floor(Math.random() * quoteArray.length);
+
+    // what is in our array at this point??
+    console.log("logging from inside getQuote.");
+    console.log(quoteArray);
+
     // check to see if newQuote is the same as the last quote. If so, get a new value
     while (newQuote === lastQuote) {
         newQuote = Math.floor(Math.random() * quoteArray.length);
